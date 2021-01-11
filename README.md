@@ -10,7 +10,7 @@ we will process the local file events emit them then resume with snorts events.
 
 - Snort will be emitting IPS events
 
-    ![Image of setup brought up](./Snort-Logger-zmqfb=plugin.png)
+    ![Image of setup brought up](./imgs/Snort-Logger-zmqfb=plugin.png)
 
 
 # Plugin configuration

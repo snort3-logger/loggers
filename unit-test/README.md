@@ -1,6 +1,6 @@
 # How to emulate EventHandler ZMQ socket
 The following diagram show how we emulate Event handler so we can unit test the new logger plugin
-    ![Image of setup brought up](../zmq_logger_UT.png)
+    ![Image of setup brought up](../imgs/zmq_logger_UT.png)
 
 ## Connect to snort and trigger snort policy deployment
 
