@@ -1,13 +1,10 @@
-import org.ajoberstar.grgit.Grgit
-
 val BUILD_OUTPUT = project.file("target").absolutePath
 val UBUNTU_VERSION = "bionic-20190515"
 val DOCKER_IMAGE = "package/zmqfb"
 
 tasks {
    
-    named("build") {
-        dependsOn(":dataplane:snort:zmqfb-plugin:buildImageForZmqFbCompilation")
+    register("build") {
 
         doLast {
             exec {
@@ -48,7 +45,7 @@ tasks {
         )
     }
 
-    named("clean") {
+    register("clean") {
         doLast {
             project.file(BUILD_OUTPUT).deleteRecursively()
         }
