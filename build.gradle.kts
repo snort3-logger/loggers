@@ -27,7 +27,7 @@ tasks {
                         "./configure --disable-static 'CXXFLAGS=-O3 -fno-rtti'; " +  
                         "mv -f /usr/local/include/snort/* /usr/local/include/; " +
                         "make VERBOSE=1 2>&1 | tee -a \$BUILD_OUTPUT/build_log.txt;" +
-                        "checkinstall -y -d0 --pkgname libloggerzmqfb --pkgversion \$ZMQFB_VERSION --pkgrelease \$ZMQFB_RELEASE --maintainer \"CNTD2.0 developers\" --backup=no --strip=no --stripso=no --install=no --pakdir \$BUILD_OUTPUT 2>&1 | tee -a \$BUILD_OUTPUT/build_log.txt;" +
+                        "checkinstall -y -d0 --pkgname libloggerzmqfb --pkgversion \$ZMQFB_VERSION --pkgrelease \$ZMQFB_RELEASE  --backup=no --strip=no --stripso=no --install=no --pakdir \$BUILD_OUTPUT 2>&1 | tee -a \$BUILD_OUTPUT/build_log.txt;" +
                         "chmod -R 777 \$BUILD_OUTPUT/ \$ZMQFB_SRC/;" +
                         "exit"
                 val args = dockerRunCmd.split(" ").toMutableList()

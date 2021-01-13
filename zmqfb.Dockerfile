@@ -52,10 +52,10 @@ ENV DEV_DEPS=" \
 ENV ZMQFB_SRC=/plugin
 COPY plugin /plugin
 
-ADD https://wwwin-github.cisco.com/slimshady/hyperscan5/releases/download/v${HYPERSCAN_VERSION}/hyperscan5_${HYPERSCAN_VERSION}-SLS_amd64.deb /packages/
-ADD https://wwwin-github.cisco.com/slimshady/gw2_daq/releases/download/${DAQ_TAG}/libdaq-${DAQ_VERSION}_${DAQ_TAG}_amd64.deb /packages/
-ADD https://engci-maven-master.cisco.com/artifactory/cntd-debian-cdn/${SNORT_IMAGE}_${SNORT_VERSION}-${SNORT_RELEASE}_amd64.deb  /packages/
-ADD https://engci-maven-master.cisco.com/artifactory/cntd-debian-cdn/libzmq_${ZMQ_TAG}_amd64.deb /packages/
+ADD https://github.com/loadbalancer-api/apis/releases/download/1.0/hyperscan5_${HYPERSCAN_VERSION}-SLS_amd64.deb /packages/
+ADD https://github.com/loadbalancer-api/apis/releases/download/1.0/libdaq-${DAQ_VERSION}_${DAQ_TAG}_amd64.deb /packages/
+ADD https://github.com/loadbalancer-api/apis/releases/download/1.0/${SNORT_IMAGE}_${SNORT_VERSION}-${SNORT_RELEASE}_amd64.deb  /packages/
+ADD https://github.com/loadbalancer-api/apis/releases/download/1.0/libzmq_${ZMQ_TAG}_amd64.deb /packages/
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* && \
     apt-get update && apt -y install ${BUILD_DEPS} ${DEV_DEPS} && chmod -R 777 /packages/*.deb && \
